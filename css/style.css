@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+.nameweb{
+    font-size: 20px;
+    font-weight: 700;
+}
+.nameweb a{
+    color: #1d1d1d;
+    text-decoration: none;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.navbar .item{
+    display: flex;  
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.navbar .item a{
+    color: #666666;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.navbar .item a:hover{
+    /* text-decoration: underline; */
+    color: #1d1d1d;
+}
+.navbar #tombol{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    display: none;
+    font-size: 20px;
+}
+.navbar #tombol.active ~ .item{
+    display: inherit;
+}
+.jumbotron{
+    background: #e0e0e0;
+    background-size: cover; 
+    background-position: top center;
+    /* height: 400px;S */
+    color: #1d1d1d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+}
+.jumbotron .wrapper{
+    width: 50%;
+    /* background: sandybrown; */
+}
+.jumbotron .wrapper p{
+    text-align: justify;
+}
+.gambar{
+    background: url("laptopisometric.svg");
+    width: 400px;
+    height: 400px;
+    background-position: center;    
+    background-size: 300px;
+    background-repeat: no-repeat;
+    /* animation: animasi 5s infinite both ease-in-out; */
+}
+#yt:hover{
+    background: red;
+}
+#ig:hover{
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.content{
+    /* height: 100vh; */
+    padding: 30px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    background: #e0e0e0;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container .kotak h1{
+    margin: 10px 0;
+}
+.container .kotak{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));;
+    justify-content: center;
+    gap: 20px;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 3px;
+}
+.welcome{
+    margin-bottom: 20px;
+}
+.follow{
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+.follow a{
+    color: #ffffff;
+    text-transform: capitalize;
+    background: #1d1d1d;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.footer{
+    padding: 10px 30px;
+    color: #1d1d1d;
+}
+@media only screen and (max-width: 1111px){
+    .gambar{
+        display: none;
+    }
+    .jumbotron .wrapper{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .navbar .item{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .navbar .item a{
+        padding: 0 30px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .navbar .item a:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .navbar #tombol{
+        display: inherit;
+    }
+}
+@media only screen and (max-width: 400px){
+    .jumbotron .wrapper{
+        width: 100%;
+    }
+}
+@keyframes animasi{
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
